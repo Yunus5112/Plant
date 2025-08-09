@@ -1,75 +1,72 @@
-# OSX
-#
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-store/
+
+# Logs
+*.log
+
+# macOS
 .DS_Store
 
-# Xcode
-#
+# IDEs
+.vscode/
+.idea/
+
+# React Native / Metro
+.expo/
+.expo-shared/
+.expo-*
+web-build/
+
+# Jest / Coverage
+coverage/
+
+# Build outputs
 build/
-*.pbxuser
-!default.pbxuser
-*.mode1v3
-!default.mode1v3
-*.mode2v3
-!default.mode2v3
-*.perspectivev3
-!default.perspectivev3
-xcuserdata
+dist/
+
+# Android
+android/.gradle/
+android/build/
+android/app/build/
+android/local.properties
+android/app/debug.keystore
+*.iml
+.gradle/
+
+# iOS
+ios/build/
+ios/DerivedData/
+ios/Pods/
+# Keep Podfile.lock committed for reproducible builds
+# ios/Podfile.lock
+
+# Xcode user data
+*.xcuserdatad/
+*.xcuserdata/
 *.xccheckout
 *.moved-aside
-DerivedData
-*.hmap
-*.ipa
-*.xcuserstate
-**/.xcode.env.local
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
 
-# Android/IntelliJ
-#
-build/
-.idea
-.gradle
-local.properties
-*.iml
-*.hprof
-.cxx/
-*.keystore
-!debug.keystore
-.kotlin/
+# SwiftPM
+.swiftpm/
+.build/
 
-# node.js
-#
-node_modules/
-npm-debug.log
-yarn-error.log
+# Watchman
+.watchmanconfig
 
-# fastlane
-#
-# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
-# screenshots whenever they are needed.
-# For more information about the recommended setup visit:
-# https://docs.fastlane.tools/best-practices/source-control/
+# Bundle artifacts
+*.bundle
+*.map
 
-**/fastlane/report.xml
-**/fastlane/Preview.html
-**/fastlane/screenshots
-**/fastlane/test_output
-
-# Bundle artifact
-*.jsbundle
-
-# Ruby / CocoaPods
-**/Pods/
-/vendor/bundle/
-
-# Temporary files created by Metro to check the health of the file watcher
-.metro-health-check*
-
-# testing
-/coverage
-
-# Yarn
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/sdks
-!.yarn/versions
+# Temp
+.tmp/
+tmp/
+temp/
