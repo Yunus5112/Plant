@@ -26,7 +26,7 @@ export default function GetStarted() {
       </View>
 
       {/* Button */}
-      <Button title="Get Started" onPress={() => navigation.navigate('OnboardingFirst')} />
+      <Button title="Get Started" onPress={() => navigation.navigate('OnboardingFirst', {})} />
 
       {/* Footer Text */}
       <Text style={styles.footerText}>
