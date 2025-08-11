@@ -10,6 +10,7 @@ import { useNavigation } from '@react-navigation/native';
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import type { RootStackParamList } from '../../../App';
 import { styles } from './PaywallScreen.style';
+import { texts } from './PaywallScreen.text';
 import {
   CARD_SPACING,
   FEATURE_CARD_WIDTH,
@@ -36,8 +37,8 @@ const PaywallScreen: React.FC = () => {
 
       {/* Foreground content */}
       <View style={[styles.content, { paddingTop: HEADER_TOP_OFFSET }]}>
-        <Text style={styles.headerTitle}>PlantApp <Text style={{ fontWeight: '400' }}>Premium</Text></Text>
-        <Text style={styles.headerSubtitle}>Access All Features</Text>
+        <Text style={styles.headerTitle}>{texts.headerTitleBrand} <Text style={{ fontWeight: '400' }}>{texts.headerTitleSuffix.trim()}</Text></Text>
+        <Text style={styles.headerSubtitle}>{texts.headerSubtitle}</Text>
 
         {/* Feature cards - horizontal carousel */}
         <ScrollView
@@ -61,18 +62,16 @@ const PaywallScreen: React.FC = () => {
           ))}
         </View>
 
-        <Button title="Try free for 3 days" onPress={() => navigation.navigate('Tabs', {})} />
+        <Button title={texts.cta} onPress={() => navigation.navigate('Tabs', {})} />
 
         {/* Footer links (static text for now) */}
-        <Text style={styles.footerNote}>
-          After the 3-day free trial period you'll be charged $27.49 per year unless you cancel before the trial expires. Yearly subscription is Auto-Renewable.
-        </Text>
+        <Text style={styles.footerNote}>{texts.trialNote}</Text>
         <View style={styles.footerLinksRow}>
-          <Text style={styles.footerLink}>Terms</Text>
+          <Text style={styles.footerLink}>{texts.terms}</Text>
           <View style={styles.dotSeparator} />
-          <Text style={styles.footerLink}>Privacy</Text>
+          <Text style={styles.footerLink}>{texts.privacy}</Text>
           <View style={styles.dotSeparator} />
-          <Text style={styles.footerLink}>Restore</Text>
+          <Text style={styles.footerLink}>{texts.restore}</Text>
         </View>
       </View>
     </SafeAreaView>

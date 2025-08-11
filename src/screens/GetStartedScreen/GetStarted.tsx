@@ -8,6 +8,7 @@ import { SvgXml } from 'react-native-svg';
 import getStartedSvg from '../../assets/GetStartedScreen/GetStartedScreenSvg';
 import { styles } from './GetStarted.style';
 import Button from '../../components/Button/Button';
+import { texts } from './GetStarted.text';
 
 export default function GetStarted() {
   const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>();
@@ -15,24 +16,22 @@ export default function GetStarted() {
     <SafeAreaView style={styles.container}>
       {/* Title */}
       <Text style={styles.title}>
-        Welcome to <Text style={styles.titleHighlight}>PlantApp</Text>
+        {texts.titlePrefix}
+        <Text style={styles.titleHighlight}>{texts.titleBrand}</Text>
       </Text>
-      <Text style={styles.subtitle}>
-        Identify more than 3000+ plants and{"\n"}88% accuracy.
-      </Text>
+      <Text style={styles.subtitle}>{texts.subtitle}</Text>
       {/* SVG */}
       <View style={styles.imageWrapper}>
         <SvgXml xml={getStartedSvg} width="100%" height="100%" />
       </View>
 
       {/* Button */}
-      <Button title="Get Started" onPress={() => navigation.navigate('OnboardingFirst', {})} />
+      <Button title={texts.cta} onPress={() => navigation.navigate('OnboardingFirst', {})} />
 
       {/* Footer Text */}
       <Text style={styles.footerText}>
-        By tapping next, you are agreeing to PlantID{"\n"}
-        <Text style={styles.link}>Terms of Use</Text> &{" "}
-        <Text style={styles.link}>Privacy Policy</Text>.
+        {texts.footer}{"\n"}
+        <Text style={styles.link}>{texts.terms}</Text> & <Text style={styles.link}>{texts.privacy}</Text>.
       </Text>
     </SafeAreaView>
   );

@@ -6,6 +6,8 @@ import { SvgXml } from 'react-native-svg';
 import leftLeaf from '../../assets/HomeScreen/LeftLeafSvg';
 import rightLeaf from '../../assets/HomeScreen/RightLeafSvg';
 import letterIcon from '../../assets/HomeScreen/LetterIconSvg';
+import searchIconSvg from '../../assets/HomeScreen/SearchIconSvg';
+import { texts } from './HomeScreen.text';
 
 const HomeScreen: React.FC = () => {
   const { data: questions } = useQuestions();
@@ -15,13 +17,16 @@ const HomeScreen: React.FC = () => {
     <SafeAreaView style={styles.container}>
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.headerWrap}>
-          <Text style={styles.title}>Hi, plant lover!</Text>
-          <Text style={styles.subtitle}>Good Afternoon!</Text>
+          <Text style={styles.title}>{texts.greetingTitle}</Text>
+          <Text style={styles.subtitle}>{texts.greetingSubtitle}</Text>
           <View style={styles.searchWrap}>
-            <SvgXml xml={leftLeaf} width="40%" height="100%" style={styles.searchLeavesLeft} />
-            <SvgXml xml={rightLeaf} width="40%" height="100%" style={styles.searchLeavesRight} />
+            <SvgXml xml={leftLeaf} width="55%" height="130%" style={styles.searchLeavesLeft} />
+            <SvgXml xml={rightLeaf} width="55%" height="130%" style={styles.searchLeavesRight} />
             <View style={styles.searchInputContainer}>
-              <Text style={styles.searchPlaceholder}>Search for plants</Text>
+              <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                <SvgXml xml={searchIconSvg} width={20} height={20} />
+                <Text style={styles.searchPlaceholder}>{texts.searchPlaceholder}</Text>
+              </View>
             </View>
           </View>
         </View>
@@ -37,7 +42,7 @@ const HomeScreen: React.FC = () => {
           </View>
         </View>
 
-        <Text style={styles.sectionTitle}>Get Started</Text>
+        <Text style={styles.sectionTitle}>{texts.getStarted}</Text>
         <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{ gap: 12 }} style={{ paddingHorizontal: 16 }}>
           {questions?.map((q) => (
             <View key={q.id} style={styles.questionCard}>

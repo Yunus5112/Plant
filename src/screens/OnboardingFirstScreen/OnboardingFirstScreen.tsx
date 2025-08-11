@@ -9,6 +9,7 @@ import { styles } from "./OnboardingFirstScreen.style";
 import Button from "../../components/Button/Button";
 import onboardingFirstScreenSvg from "../../assets/OnboardingFirstScreen/OnboardingSFirstScreenSvg";
 import Dots from "../../components/Dots/Dots";
+import { texts } from './OnboardingFirstScreen.text';
 
 export default function OnboardingFirst() {
   const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>();
@@ -16,7 +17,10 @@ export default function OnboardingFirst() {
     <SafeAreaView style={styles.container}>
       {/* Title */}
       <Text style={styles.title}>
-       Take a photo to <Text style={styles.titleHighlight}>identify {"\n"}<Text style={styles.title}>the plant!</Text></Text>
+        {texts.titleLine1}
+        <Text style={styles.titleHighlight}>{texts.highlight}</Text>
+        {"\n"}
+        <Text style={styles.title}>{texts.titleLine2}</Text>
       </Text>
      
       {/* SVG */}
@@ -25,7 +29,7 @@ export default function OnboardingFirst() {
       </View>
 
       {/* Button */}
-      <Button title="Continue" onPress={() => navigation.navigate('OnboardingSecond', {})} />
+      <Button title={texts.cta} onPress={() => navigation.navigate('OnboardingSecond', {})} />
       <Dots total={3} activeIndex={0} />
 
     </SafeAreaView>

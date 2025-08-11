@@ -9,6 +9,7 @@ import phoneSvg from "../../assets/OnboardingSecondScreen/PhoneSvg";
 import { styles } from "./OnboardingSecondScreen.style";
 import Button from "../../components/Button/Button";
 import Dots from "../../components/Dots/Dots";
+import { texts } from './OnboardingSecondScreen.text';
 
 
 export default function OnboardingSecond() {
@@ -17,7 +18,8 @@ export default function OnboardingSecond() {
     <SafeAreaView style={styles.container}>
       {/* Üst Başlık */}
       <Text style={styles.title}>
-       Get plant <Text style={styles.titleHighlight}>care guides</Text>
+        {texts.titlePrefix}
+        <Text style={styles.titleHighlight}>{texts.highlight}</Text>
       </Text>
      
       {/* Bitki Görseli (SVG) */}
@@ -26,7 +28,7 @@ export default function OnboardingSecond() {
       </View>
 
        {/* Button */}
-       <Button title="Continue" onPress={() => navigation.navigate('Paywall', {})} />
+       <Button title={texts.cta} onPress={() => navigation.navigate('Paywall', {})} />
        <Dots total={3} activeIndex={1} />
 
     </SafeAreaView>
