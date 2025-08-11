@@ -6,6 +6,9 @@ import FeatureCard from '../../components/FeatureCard/FeatureCard';
 import PlanCard from '../../components/PlanCard/PlanCard';
 import type { Plan } from '../../components/PlanCard/PlanCard.logic';
 import Button from '../../components/Button/Button';
+import { useNavigation } from '@react-navigation/native';
+import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import type { RootStackParamList } from '../../../App';
 import { styles } from './PaywallScreen.style';
 import {
   CARD_SPACING,
@@ -18,6 +21,7 @@ import {
 
 const PaywallScreen: React.FC = () => {
   const [selectedPlanId, setSelectedPlanId] = useState<string>('year');
+  const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>();
 
   const features = useMemo(() => getDefaultFeatures(), []);
 
@@ -57,7 +61,7 @@ const PaywallScreen: React.FC = () => {
           ))}
         </View>
 
-        <Button title="Try free for 3 days" />
+        <Button title="Try free for 3 days" onPress={() => navigation.navigate('Tabs', {})} />
 
         {/* Footer links (static text for now) */}
         <Text style={styles.footerNote}>
