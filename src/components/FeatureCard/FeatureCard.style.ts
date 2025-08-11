@@ -17,12 +17,12 @@ export const styles = StyleSheet.create({
   title: {
     color: '#FFFFFF',
     fontSize: 20,
-    fontWeight: '500',
+   fontFamily: 'Rubik-Medium',
   },
   subtitle: {
     color: '#FFFFFFB2',
     fontSize: 13,
-    fontWeight: '400',
+    fontFamily: 'Rubik-Regular',
     marginTop: 6,
   },
 });

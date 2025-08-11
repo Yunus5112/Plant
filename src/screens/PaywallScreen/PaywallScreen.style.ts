@@ -21,12 +21,12 @@ export const styles = StyleSheet.create({
   headerSubtitle: {
     color: '#FFFFFFB2',
     fontSize: 17,
-    fontWeight: '300',
+    fontFamily: 'Rubik-Light',
     marginTop: -6,
   },
   footerNote: {
     color: '#FFFFFF85',
-    fontSize: 11,
+    fontFamily: 'Rubik-Light',
     textAlign: 'center',
   },
   footerLinksRow: {
@@ -37,7 +37,7 @@ export const styles = StyleSheet.create({
   },
   footerLink: {
     color: '#FFFFFF80',
-    fontWeight: '400',
+    fontFamily: 'Rubik-Regular',
     fontSize: 11,
   },
   dotSeparator: {

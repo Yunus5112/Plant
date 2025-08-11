@@ -13,10 +13,12 @@ export const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: '400',
     color: '#13231B',
+    fontFamily: 'Rubik',
   },
   subtitle: {
     fontSize: 24,
     fontWeight: '500',
+    fontFamily: 'Rubik',
     color: '#13231B',
     marginTop: 4,
     marginBottom: 12,
@@ -52,6 +54,7 @@ export const styles = StyleSheet.create({
     color: '#AFAFAF',
     fontSize: 15.5,
     fontWeight: '400',
+    fontFamily: 'Rubik',
   },
   bannerWrap: {
     paddingHorizontal: 16,
@@ -114,8 +117,8 @@ export const styles = StyleSheet.create({
   },
   questionTitle: {
     color: '#FFFFFF',
+    fontFamily: 'Rubik-Regular',
     fontSize: 15,
-    fontWeight: '400',
   },
   categoriesGrid: {
     flexDirection: 'row',
@@ -137,7 +140,8 @@ export const styles = StyleSheet.create({
     top: 12,
     left: 12,
     color: '#13231B',
-    fontWeight: '600',
+    fontFamily: 'Rubik-Medium',
+    fontSize: 16,
   },
   categoryImage: {
     position: 'absolute',

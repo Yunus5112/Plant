@@ -5,6 +5,9 @@ import paywallScreenSvg from '../../assets/PaywallScreen/PaywallScreenSvg';
 import FeatureCard from '../../components/FeatureCard/FeatureCard';
 import PlanCard from '../../components/PlanCard/PlanCard';
 import type { Plan } from '../../components/PlanCard/PlanCard.logic';
+import { useDispatch, useSelector } from 'react-redux';
+import { activatePremium, setSelectedPlan } from '../../store/slices/subscriptionSlice';
+import type { RootState } from '../../store';
 import Button from '../../components/Button/Button';
 import { useNavigation } from '@react-navigation/native';
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
@@ -21,7 +24,8 @@ import {
 } from './PaywallScreen.logic';
 
 const PaywallScreen: React.FC = () => {
-  const [selectedPlanId, setSelectedPlanId] = useState<string>('year');
+  const dispatch = useDispatch();
+  const selectedPlanId = useSelector((s: RootState) => s.subscription.selectedPlan) || 'year';
   const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>();
 
   const features = useMemo(() => getDefaultFeatures(), []);
@@ -58,7 +62,7 @@ const PaywallScreen: React.FC = () => {
         {/* Plans */}
         <View style={{ gap: 12, marginTop: 2 }}>
           {plans.map((plan) => (
-            <PlanCard key={plan.id} plan={plan} selected={selectedPlanId === plan.id} onSelect={setSelectedPlanId} />
+            <PlanCard key={plan.id} plan={plan} selected={selectedPlanId === plan.id} onSelect={(id) => dispatch(setSelectedPlan(id as any))} />
           ))}
         </View>
 

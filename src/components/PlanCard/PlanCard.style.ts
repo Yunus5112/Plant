@@ -35,12 +35,12 @@ export const styles = StyleSheet.create({
   },
   title: {
     color: '#FFFFFF',
-    fontWeight: '500',
+    fontFamily: 'Rubik-Medium',
     fontSize: 16,
   },
   subtitle: {
     color: '#FFFFFFB2',
-    fontSize: 12,
+    fontFamily: 'Rubik-Light',
     marginTop: 8,
   },
   badge: {
@@ -55,7 +55,7 @@ export const styles = StyleSheet.create({
   },
   badgeText: {
     color: '#FFFFFF',
-    fontWeight: '500',
+    fontFamily:'Rubik-Medium',
     fontSize: 12,
   },
 });

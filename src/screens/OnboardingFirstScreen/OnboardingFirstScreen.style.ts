@@ -3,22 +3,23 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    margin:24,
   },
   title: {
     fontSize: 28,
-    fontWeight: "500",
+    fontFamily: 'Rubik-Medium',
     color: "#13231B",
+    paddingHorizontal: 24,
+    paddingTop: 24,
   },
   titleHighlight: {
-    fontWeight: "800",
+    fontFamily: 'Rubik-Bold',
   },
   imageWrapper: {
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
     alignSelf: "stretch",
-    marginTop: 20,
+    marginTop: 10,
   },
 });
 
