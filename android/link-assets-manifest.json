@@ -1,0 +1,81 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/Fonts/Rubik/Rubik-Black.ttf",
+      "sha1": "237eda21d91a348f811f05473d1ce2eb995cc118"
+    },
+    {
+      "path": "src/assets/Fonts/Rubik/Rubik-BlackItalic.ttf",
+      "sha1": "839bf9c34ef2b7f2caff373a505a66c8719d1be5"
+    },
+    {
+      "path": "src/assets/Fonts/Rubik/Rubik-Bold.ttf",
+      "sha1": "b6bde58649cb31f13b4cab286568ba4ffc063ca3"
+    },
+    {
+      "path": "src/assets/Fonts/Rubik/Rubik-BoldItalic.ttf",
+      "sha1": "f2143890a5167a13f2ea2c18ecf55405047c9b92"
+    },
+    {
+      "path": "src/assets/Fonts/Rubik/Rubik-Italic.ttf",
+      "sha1": "25fe5c4463d4f52be1c28c443397a4489de78bc5"
+    },
+    {
+      "path": "src/assets/Fonts/Rubik/Rubik-Light.ttf",
+      "sha1": "4358444a898995f5aac1f633a8e7a4a05858ac29"
+    },
+    {
+      "path": "src/assets/Fonts/Rubik/Rubik-LightItalic.ttf",
+      "sha1": "f08951aa9fb221947e18e1724c99c0605893af2e"
+    },
+    {
+      "path": "src/assets/Fonts/Rubik/Rubik-Medium.ttf",
+      "sha1": "f6f347698bff8fac2c54a8277294ccfdb4d165cd"
+    },
+    {
+      "path": "src/assets/Fonts/Rubik/Rubik-MediumItalic.ttf",
+      "sha1": "c3b1b6f6eba7e0d1adbdd0f0a2bd5b38fc439344"
+    },
+    {
+      "path": "src/assets/Fonts/Rubik/Rubik-Regular.ttf",
+      "sha1": "9a8148e2f915fb81be58604634fdde1141665a25"
+    },
+    {
+      "path": "src/assets/Fonts/SfProText/SFPRODISPLAYBLACKITALIC.OTF",
+      "sha1": "0de83203799afa70ae34ef9e2a223144147e8ad8"
+    },
+    {
+      "path": "src/assets/Fonts/SfProText/SFPRODISPLAYBOLD.OTF",
+      "sha1": "100e7b7fd24facbca4db38e6d4d7e01c73b82818"
+    },
+    {
+      "path": "src/assets/Fonts/SfProText/SFPRODISPLAYHEAVYITALIC.OTF",
+      "sha1": "094c4f5f6f14d5964efe8ece373ac918674bd498"
+    },
+    {
+      "path": "src/assets/Fonts/SfProText/SFPRODISPLAYLIGHTITALIC.OTF",
+      "sha1": "1bf212b6006b021ceb13f6bdcf37d2be05960678"
+    },
+    {
+      "path": "src/assets/Fonts/SfProText/SFPRODISPLAYMEDIUM.OTF",
+      "sha1": "a5f5e08dd38cac2f857fb7510f7e92a2399b6f5c"
+    },
+    {
+      "path": "src/assets/Fonts/SfProText/SFPRODISPLAYREGULAR.OTF",
+      "sha1": "e19df199e78d296e5b6491d4832a76756532ed43"
+    },
+    {
+      "path": "src/assets/Fonts/SfProText/SFPRODISPLAYSEMIBOLDITALIC.OTF",
+      "sha1": "014f13cdf8b948617605822648fe3f9cc6c648e4"
+    },
+    {
+      "path": "src/assets/Fonts/SfProText/SFPRODISPLAYTHINITALIC.OTF",
+      "sha1": "a54767f9c4b220caf9d0ca246bb29e484ad98dce"
+    },
+    {
+      "path": "src/assets/Fonts/SfProText/SFPRODISPLAYULTRALIGHTITALIC.OTF",
+      "sha1": "e3e3f7af872a6a0fa2d00d5099a7bf0bd4a46473"
+    }
+  ]
+}

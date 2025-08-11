@@ -1,6 +1,6 @@
 export const texts = {
   greetingTitle: 'Hi, plant lover!',
-  greetingSubtitle: 'Good Afternoon! ☁️',
+  greetingSubtitle: 'Good Afternoon! ⛅️',
   searchPlaceholder: 'Search for plants',
   bannerTitle: 'FREE Premium Available',
   bannerSubtitle: 'Tap to upgrade your account!',

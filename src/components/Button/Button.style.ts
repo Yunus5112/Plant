@@ -7,7 +7,8 @@ export const styles = StyleSheet.create({
     height: 56,
     justifyContent: 'center',
     alignItems: 'center',
-    marginBottom: 10,
+    marginBottom: 12,
+    marginHorizontal:24,
   },
   buttonDisabled: {
     opacity: 0.6,
