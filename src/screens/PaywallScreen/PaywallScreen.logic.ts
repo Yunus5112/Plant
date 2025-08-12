@@ -7,8 +7,6 @@ export const CARD_SPACING = 12;
 export const FEATURE_CARD_WIDTH = Math.round(screenWidth * 0.4);
 export const FEATURE_SNAP_INTERVAL = FEATURE_CARD_WIDTH + CARD_SPACING;
 
-// Dynamic vertical offset to position the header/title lower on the screen
-// Tweak the ratio (e.g., 0.24 - 0.32) to match the visual perfectly across devices
 export const HEADER_TOP_OFFSET = Math.round(screenHeight * 0.3);
 
 export const getDefaultFeatures = () => [

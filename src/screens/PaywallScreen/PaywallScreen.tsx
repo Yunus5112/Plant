@@ -92,7 +92,7 @@ const PaywallScreen: React.FC = () => {
 
         <Button style={{ marginHorizontal: 4 }} title={texts.cta} onPress={() => navigation.navigate('Tabs', {})} />
 
-        {/* Footer links (static text for now) */}
+        {/* Footer links */}
         <Text style={styles.footerNote}>{texts.trialNote}</Text>
         <View style={styles.footerLinksRow}>
           <Text style={styles.footerLink}>{texts.terms}</Text>

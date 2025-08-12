@@ -15,6 +15,7 @@ export default function Button({ title, onPress, disabled = false, style, textSt
     <TouchableOpacity
       accessibilityRole="button"
       activeOpacity={0.8}
+      disabled={disabled}
       style={[styles.button, disabled && styles.buttonDisabled, style]}
       onPress={disabled ? undefined : onPress}
     >
