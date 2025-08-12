@@ -20,6 +20,23 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     alignSelf: "stretch",
     marginTop: 20,
+    position: 'relative',
+    overflow: 'visible',
+  },
+  blurLeaf: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+  },
+  plantsDeck: {
+    position: 'absolute',
+    right: 24,
+    top: 36,
+  },
+  ctaWrapper: {
+    marginTop: -24,
   },
 });
 
