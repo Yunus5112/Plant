@@ -40,7 +40,7 @@ function tintSvg(xml: string, color: string): string {
     .replace(/fill="(?!none)[^"]+"/g, `fill="${color}"`);
 }
 
-const CustomTabBar: React.FC<BottomTabBarProps> = ({ state, descriptors, navigation }) => {
+const CustomTabBar = ({ state, descriptors, navigation }: BottomTabBarProps) => {
   const insets = useSafeAreaInsets();
   return (
     <View style={[styles.tabBar, { paddingBottom: Math.max(10, insets.bottom) }]}>

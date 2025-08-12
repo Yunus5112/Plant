@@ -25,7 +25,7 @@ import {
   HEADER_TOP_OFFSET,
 } from './PaywallScreen.logic';
 
-const PaywallScreen: React.FC = () => {
+const PaywallScreen = () => {
   const dispatch = useDispatch();
   const selectedPlanId = useSelector((s: RootState) => s.subscription.selectedPlan) || 'year';
   const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>();

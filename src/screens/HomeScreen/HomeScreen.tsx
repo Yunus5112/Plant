@@ -9,7 +9,7 @@ import letterIcon from '../../assets/HomeScreen/LetterIconSvg';
 import searchIconSvg from '../../assets/HomeScreen/SearchIconSvg';
 import { texts } from './HomeScreen.text';
 
-const HomeScreen: React.FC = () => {
+const HomeScreen = () => {
   const { data: questions } = useQuestions();
   const { data: categories } = useCategories();
 

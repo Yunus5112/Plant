@@ -25,7 +25,7 @@ export type RootStackParamList = {
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
-const App: React.FC = () => {
+const App = () => {
   const queryClient = new QueryClient();
   const [initialRoute, setInitialRoute] = useState<keyof RootStackParamList>('GetStarted');
 

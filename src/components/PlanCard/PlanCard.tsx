@@ -3,7 +3,7 @@ import { View, Text, TouchableOpacity } from 'react-native';
 import { styles } from './PlanCard.style';
 import type { PlanCardProps } from './PlanCard.logic';
 
-const PlanCard: React.FC<PlanCardProps> = ({ plan, selected, onSelect }) => {
+const PlanCard = ({ plan, selected, onSelect }: PlanCardProps) => {
   const content = (
     <>
       <View style={styles.row}>

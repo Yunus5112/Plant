@@ -4,7 +4,7 @@ import { styles } from './Dots.style';
 import type { DotsProps } from './Dots.logic';
 import { getDotStyles } from './Dots.logic';
 
-const Dots: React.FC<DotsProps> = ({ total, activeIndex }) => {
+const Dots = ({ total, activeIndex }: DotsProps) => {
   return (
     <View style={styles.container}>
       <View style={styles.dotsRow}>

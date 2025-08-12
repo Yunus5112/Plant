@@ -7,7 +7,7 @@ type Props = FeatureCardProps & { style?: StyleProp<ViewStyle> };
 
 const DEFAULT_CARD_WIDTH = Math.round(Dimensions.get('window').width * 0.7);
 
-const FeatureCard: React.FC<Props> = ({ title, subtitle, icon, width, style }) => {
+const FeatureCard = ({ title, subtitle, icon, width, style }: Props) => {
   return (
     <View style={[styles.container, { width: width ?? DEFAULT_CARD_WIDTH }, style]}>
       {icon ? <View style={styles.iconContainer}>{icon}</View> : null}
