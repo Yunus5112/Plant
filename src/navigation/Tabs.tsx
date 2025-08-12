@@ -107,18 +107,25 @@ export default function Tabs() {
 }
 
 const styles = StyleSheet.create({
-  center: { flex: 1, alignItems: 'center', justifyContent: 'center' },
+  center: { 
+    flex: 1, 
+    alignItems: 'center', 
+    justifyContent: 'center' 
+  },
   tabBar: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-around',
-    paddingBottom: 10,
-    paddingTop: 10,
+    // paddingBottom: 4,
+    // paddingTop: 4,
     backgroundColor: '#FFFFFF',
     borderTopWidth: 0.5,
-    borderTopColor: '#E8ECEF',
+    borderTopColor: '#13231B1A',
   },
-  tabButton: { flex: 1, alignItems: 'center' },
+  tabButton: {
+     flex: 1, 
+     alignItems: 'center'
+    },
   scanButtonWrapper: {
     width: 64,
     alignItems: 'center',
@@ -131,11 +138,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#28AF6E',
     alignItems: 'center',
     justifyContent: 'center',
-    shadowColor: '#000',
-    shadowOpacity: 0.2,
-    shadowOffset: { width: 0, height: 4 },
-    shadowRadius: 6,
-    elevation: 6,
   },
 });
 

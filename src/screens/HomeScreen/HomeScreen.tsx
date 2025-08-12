@@ -20,8 +20,8 @@ const HomeScreen: React.FC = () => {
           <Text style={styles.title}>{texts.greetingTitle}</Text>
           <Text style={styles.subtitle}>{texts.greetingSubtitle}</Text>
           <View style={styles.searchWrap}>
-            <SvgXml xml={leftLeaf} width="55%" height="130%" style={styles.searchLeavesLeft} />
-            <SvgXml xml={rightLeaf} width="55%" height="130%" style={styles.searchLeavesRight} />
+            <SvgXml xml={leftLeaf} width="55%" height="80%" style={styles.searchLeavesLeft} />
+            <SvgXml xml={rightLeaf} width="55%" height="80%" style={styles.searchLeavesRight} />
             <View style={styles.searchInputContainer}>
               <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
                 <SvgXml xml={searchIconSvg} width={20} height={20} />
@@ -29,6 +29,7 @@ const HomeScreen: React.FC = () => {
               </View>
             </View>
           </View>
+          <View style={styles.headerDivider} />
         </View>
 
         <View style={styles.bannerWrap}>
