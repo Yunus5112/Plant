@@ -5,14 +5,14 @@ export const styles = StyleSheet.create({
     backgroundColor: '#243A2F',
     padding: 16,
     borderRadius: 14,
-    height:128,
+    height: 140,
   },
-  row: {
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-  icon: {
-    marginRight: 12,
+  iconContainer: {
+    backgroundColor: '#0000003D',
+    borderRadius: 14,
+    padding: 12,
+    alignSelf: 'flex-start',
+    marginBottom: 12,
   },
   title: {
     color: '#FFFFFF',

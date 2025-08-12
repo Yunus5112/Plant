@@ -20,7 +20,6 @@ export const styles = StyleSheet.create({
     width: 20,
     height: 20,
     borderRadius: 10,
-    borderWidth: 1,
     borderColor: '#FFFFFF4D',
     backgroundColor: '#FFFFFF26',
     alignItems: 'center',
@@ -45,8 +44,8 @@ export const styles = StyleSheet.create({
   },
   badge: {
     position: 'absolute',
-    top: 8,
-    right: 8,
+    top: -14,
+    right: -15,
     backgroundColor: '#28AF6E',
     paddingHorizontal: 8,
     paddingVertical: 2,

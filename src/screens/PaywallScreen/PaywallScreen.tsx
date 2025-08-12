@@ -2,6 +2,8 @@ import React, { useMemo, useState } from 'react';
 import { SafeAreaView, Text, View, ScrollView } from 'react-native';
 import { SvgXml } from 'react-native-svg';
 import paywallScreenSvg from '../../assets/PaywallScreen/PaywallScreenSvg';
+import closeIconSvg from '../../assets/PaywallScreen/CloseIconSvg';
+import { setOnboardingCompleted } from '../../storage/onboarding';
 import FeatureCard from '../../components/FeatureCard/FeatureCard';
 import PlanCard from '../../components/PlanCard/PlanCard';
 import type { Plan } from '../../components/PlanCard/PlanCard.logic';
@@ -39,6 +41,13 @@ const PaywallScreen: React.FC = () => {
         <SvgXml xml={paywallScreenSvg} width="100%" height="65%" preserveAspectRatio="xMidYMid slice" />
       </View>
 
+      {/* Close button */}
+      <View style={styles.closeButton}>
+        <Text onPress={async () => { await setOnboardingCompleted(true); navigation.navigate('Tabs', {}); }}>
+          <SvgXml xml={closeIconSvg} width={32} height={32} />
+        </Text>
+      </View>
+
       {/* Foreground content */}
       <View style={[styles.content, { paddingTop: HEADER_TOP_OFFSET }]}>
         <Text style={styles.headerTitle}>{texts.headerTitleBrand} <Text style={{ fontWeight: '400' }}>{texts.headerTitleSuffix.trim()}</Text></Text>
@@ -48,25 +57,40 @@ const PaywallScreen: React.FC = () => {
         <ScrollView
           horizontal
           showsHorizontalScrollIndicator={false}
-          contentContainerStyle={{ paddingHorizontal: 16 }}
+          contentContainerStyle={{ paddingHorizontal: 4 }}
           snapToInterval={FEATURE_SNAP_INTERVAL}
           decelerationRate="fast"
         >
           {features.map((item, index) => (
             <View key={item.id} style={{ marginRight: index === features.length - 1 ? 0 : CARD_SPACING }}>
-              <FeatureCard title={item.title} subtitle={item.subtitle} width={FEATURE_CARD_WIDTH} />
+              <FeatureCard
+                title={item.title}
+                subtitle={item.subtitle}
+                width={FEATURE_CARD_WIDTH}
+                icon={
+                  <SvgXml
+                    xml={[
+                      require('../../assets/PaywallScreen/ScanSvg').default,
+                      require('../../assets/PaywallScreen/SpeedSvg').default,
+                      require('../../assets/PaywallScreen/DetailSvg').default,
+                    ][index % 3]}
+                    width={18}
+                    height={18}
+                  />
+                }
+              />
             </View>
           ))}
         </ScrollView>
 
         {/* Plans */}
-        <View style={{ gap: 12, marginTop: 2 }}>
+        <View style={{ gap: 8, marginTop: 2 }}>
           {plans.map((plan) => (
             <PlanCard key={plan.id} plan={plan} selected={selectedPlanId === plan.id} onSelect={(id) => dispatch(setSelectedPlan(id as any))} />
           ))}
         </View>
 
-        <Button title={texts.cta} onPress={() => navigation.navigate('Tabs', {})} />
+        <Button style={{ marginHorizontal: 4 }} title={texts.cta} onPress={() => navigation.navigate('Tabs', {})} />
 
         {/* Footer links (static text for now) */}
         <Text style={styles.footerNote}>{texts.trialNote}</Text>

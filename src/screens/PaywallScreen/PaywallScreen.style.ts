@@ -13,6 +13,13 @@ export const styles = StyleSheet.create({
     paddingHorizontal: 16,
     gap: 16,
   },
+  closeButton: {
+    position: 'absolute',
+    right: 16,
+    top: 96,
+    zIndex: 20,
+    backgroundColor: '#00000066',
+  },
   headerTitle: {
     color: '#FFFFFF',
     fontSize: 30,

@@ -7,7 +7,12 @@ const PlanCard: React.FC<PlanCardProps> = ({ plan, selected, onSelect }) => {
   const content = (
     <>
       <View style={styles.row}>
-        <View style={[styles.radioOuter, selected && { borderColor: '#28AF6E', borderWidth: 2 }] }>
+        <View
+          style={[
+            styles.radioOuter,
+            selected && { borderColor: '#28AF6E', borderWidth:2, backgroundColor: '#28AF6E' },
+          ]}
+        >
           {selected ? <View style={styles.radioInner} /> : null}
         </View>
         <View style={styles.textWrap}>
@@ -26,7 +31,7 @@ const PlanCard: React.FC<PlanCardProps> = ({ plan, selected, onSelect }) => {
 
   return (
     <TouchableOpacity activeOpacity={0.9} onPress={() => onSelect(plan.id)}>
-      <View style={styles.container}>{content}</View>
+      <View style={[styles.container, selected && { borderWidth: 1.5, borderColor: '#28AF6E' }]}>{content}</View>
     </TouchableOpacity>
   );
 };

@@ -10,10 +10,8 @@ const DEFAULT_CARD_WIDTH = Math.round(Dimensions.get('window').width * 0.7);
 const FeatureCard: React.FC<Props> = ({ title, subtitle, icon, width, style }) => {
   return (
     <View style={[styles.container, { width: width ?? DEFAULT_CARD_WIDTH }, style]}>
-      <View style={styles.row}>
-        {icon ? <View style={styles.icon}>{icon}</View> : null}
-        <Text style={styles.title}>{title}</Text>
-      </View>
+      {icon ? <View style={styles.iconContainer}>{icon}</View> : null}
+      <Text style={styles.title}>{title}</Text>
       <Text style={styles.subtitle}>{subtitle}</Text>
     </View>
   );

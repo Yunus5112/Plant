@@ -11,6 +11,8 @@ import OnboardingSecond from './src/screens/OnboardingSecondScreen/OnboardingSec
 import Paywall from './src/screens/PaywallScreen/PaywallScreen';
 import HomeScreen from './src/screens/HomeScreen/HomeScreen';
 import Tabs from './src/navigation/Tabs';
+import { useEffect, useState } from 'react';
+import { getOnboardingCompleted } from './src/storage/onboarding';
 
 export type RootStackParamList = {
   GetStarted: {};
@@ -25,11 +27,20 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 
 const App: React.FC = () => {
   const queryClient = new QueryClient();
+  const [initialRoute, setInitialRoute] = useState<keyof RootStackParamList>('GetStarted');
+
+  useEffect(() => {
+    (async () => {
+      const done = await getOnboardingCompleted();
+      setInitialRoute(done ? 'Tabs' : 'GetStarted');
+    })();
+  }, []);
+
   return (
     <Provider store={store}>
       <QueryClientProvider client={queryClient}>
         <NavigationContainer>
-          <Stack.Navigator initialRouteName="GetStarted" screenOptions={{ headerShown: false }}>
+          <Stack.Navigator initialRouteName={initialRoute} screenOptions={{ headerShown: false }}>
             <Stack.Screen name="GetStarted" component={GetStarted} />
             <Stack.Screen name="OnboardingFirst" component={OnboardingFirst} />
             <Stack.Screen name="OnboardingSecond" component={OnboardingSecond} />
